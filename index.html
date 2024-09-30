@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-img">
+        <main>
+            <div>
+                <div class="center">
+                    <form class="formPrin" >
+                        <input 
+                            type="text"
+                            id="entrada" 
+                            class="formPrin__input input">
+                        <button 
+                            type="button" 
+                            id="b" 
+                            class="formPrin__btn btn">
+                                Ir al Video
+                        </button>
+                    </form>
+                    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="historial">
+                    <div class="historial__video">
+
+
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.7/uuid.min.js"></script>
+    <script src="main.js"></script>
+    <script src="localStorage.js"></script>
+    <script src="integration.js"></script>
+</body>
+</html>
