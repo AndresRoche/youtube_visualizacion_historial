@@ -15,8 +15,24 @@ function lsSetData(url){
     let list = JSON.parse(localStorage.getItem('list'))
     lsClear()
     localStorageInit()
-    list.push({id: uuid.v4(), url: vidoeOrList(getYoutubeId(url)), img: 'https://i.ytimg.com/vi/'+getYoutubeId(url,true)+'/sddefault.jpg'})
-    
+
+    let videoId, playListId = ""
+
+    if(isVideoList(url)){
+        videoId = getYoutubeId(url, true)
+        playListId = getYoutubeId(url)
+    } else {
+        videoId = getYoutubeId(url, true)
+    }
+
+
+    list.push({
+        id: uuid.v4(), 
+        url:url, 
+        videoId: videoId,
+        playListId: playListId,
+        img: 'https://i.ytimg.com/vi/'+getYoutubeId(url,true)+'/hqdefault.jpg' 
+    })
     localStorage.setItem('list', JSON.stringify(list))
 }
 

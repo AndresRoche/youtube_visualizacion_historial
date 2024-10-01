@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.js"></script>
 </head>
 <body>
     <div class="background-img">
@@ -27,7 +28,11 @@
                                 Ir al Video
                         </button>
                     </form>
-                    <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                    <div class="pantalla">
+                        <lite-youtube id="video" playlistid="PL9k4AlzXOsbDj39yt9a_MzL8m7juBozg-"></lite-youtube>
+                    </div>
+                    
                 </div>
                 <div class="historial">
                     <div class="historial__video">

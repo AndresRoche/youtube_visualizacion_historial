@@ -12,7 +12,7 @@ function render(){
     list.forEach(e => {
         conten.innerHTML += `<div class="card_video box">
                                 <div class="card_info">
-                                    <img class="card_img" src="${e.img}" id="${e.url}">
+                                    <img class="card_img" src="${e.img}" id="${e.videoId}" url="${e.url}">
                                 </div>
                                 <div class="card_btn">
                                     <button class="btn rojo" id="${e.id}">Eleminar</button>
@@ -30,9 +30,9 @@ function render(){
 
     document.querySelectorAll('.card_img').forEach(img => {
         img.addEventListener('click', e => {
-            let video_framer = document.querySelector(".video")
+            let video_framer = document.querySelector("#video")
             let input = document.getElementById("entrada")
-            video_framer.src = e.target.id
+            video_framer.setAttribute("videoid",e.target.id)
             input.value = e.target.id
         })
     })
