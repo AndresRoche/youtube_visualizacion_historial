@@ -9,8 +9,18 @@ function render(){
 
     conten.innerHTML = ""
     
+
+
     list.forEach(e => {
+
+        let mostrar = "display:block;" 
+
+        if(e.playListId==""){
+            mostrar="display:none;"
+        }
+
         conten.innerHTML += `<div class="card_video box">
+                                <span class="card_playList" style="${mostrar}">PlayList</span>
                                 <div class="card_info">
                                     <img class="card_img" src="${e.img}" id="${e.videoId}" url="${e.url}">
                                 </div>
@@ -33,7 +43,7 @@ function render(){
             let video_framer = document.querySelector("#video")
             let input = document.getElementById("entrada")
             video_framer.setAttribute("videoid",e.target.id)
-            input.value = e.target.id
+            input.value = e.target.getAttribute("url")
         })
     })
 

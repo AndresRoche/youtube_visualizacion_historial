@@ -155,6 +155,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 80%;
+    margin-top: 3rem;
 }
 
 .formPrin .formPrin__input {
@@ -171,7 +172,13 @@ main {
 /* Video de Youtube */
 
 .pantalla {
-    width: 100%;
+    width: 95%;
+}
+
+.pantalla__btn
+{
+    display: flex;
+    width: auto;
 }
 
 #video {
@@ -224,6 +231,11 @@ main {
 
 .historial__video .card_info {
     padding: 2rem;
+}
+
+.historial__video .card_video .card_playList{
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .historial__video .card_info .card_img {
