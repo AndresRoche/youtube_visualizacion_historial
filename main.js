@@ -24,11 +24,11 @@ function getYoutubeId(url,nolist=false){
     let buscar = new RegExp('(((?<==)|(?<=e/)|(?<=ed/)).{11}(?=(&|$)))')
     let buscarList = new RegExp('(?<=list=).*$')
 
-    // Busca si tiene el list, 
+    // Busca si tiene el list,
     if (url.search(buscarList) != -1 && !nolist) {
         //retorna el id de la list
         return url.substr(url.search(buscarList), 34)
-        
+
 
     // busca el id normal
     } else if (url.search(buscar) != -1){
@@ -56,11 +56,11 @@ function ponerVideo(url_youtube){
             video_framer.setAttribute("videoid",input)
             video_framer.setAttribute("playlistid","")
         }
-        
+
     } else {
         /* La expresion regular va a sacar esto:
-         * https://www.youtube.com/watch?v=7wo0zZur_Yk => 7wo0zZur_Yk      
-         * https://youtu.be/TMazt2Qv63s => TMazt2Qv63s 
+         * https://www.youtube.com/watch?v=7wo0zZur_Yk => 7wo0zZur_Yk
+         * https://youtu.be/TMazt2Qv63s => TMazt2Qv63s
          * https://www.youtube.com/watch?v=7wo0zZur_Yk&list=PLo5lAe9kQrwrnxrTu3HumlUz3k8DP1_r7 => 7wo0zZur_Yk
          */
         if(isVideoList(input)){
@@ -72,8 +72,8 @@ function ponerVideo(url_youtube){
             video_framer.setAttribute("videoid",getYoutubeId(input))
             video_framer.setAttribute("playlistid","")
         }
-        
-        
+
+
     }
 
 }
@@ -83,13 +83,14 @@ document.addEventListener("DOMContentLoaded", () => {
     'use strict'
 
     document.querySelector("#b").addEventListener('click', e => {
-        e.preventDefault();
-        let url = document.querySelector("#entrada").value
-        if (url != "") {
-            ponerVideo(url)
-            lsSetData(url)
-        } 
-        
-        render()
+      e.preventDefault();
+      let url = document.querySelector("#entrada").value
+      // aqui deberia hacer algo que compruebe que si se un link de youtube XD
+      if (url != "") {
+        ponerVideo(url)
+        lsSetData(url)
+      }
+
+      render()
     })
 });

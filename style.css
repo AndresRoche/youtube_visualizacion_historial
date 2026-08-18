@@ -175,7 +175,7 @@ main {
 /* Video de Youtube */
 
 .pantalla {
-    width: 95%;
+    width:768px;
 }
 
 .pantalla__btn {
